@@ -1,0 +1,18 @@
+[package]
+name = "debian-changelog"
+version = "0.1.0"
+authors = ["Michael Aaron Murphy <mmstick@pm.me>"]
+edition = "2018"
+license = "MPL-2.0"
+
+[features]
+tokio-async = ["tokio"]
+std-async = ["async-std"]
+
+[dependencies]
+chrono = "0.4.9"
+thiserror = "1.0.4"
+smart-default = "0.5.2"
+futures-preview = { version = "0.3.0-alpha.19", features = ["async-await"]}
+async-std = { version = "", optional = true }
+tokio = { version = "0.2.0-alpha.6", optional = true }
